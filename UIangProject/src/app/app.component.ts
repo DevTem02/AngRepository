@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  Data :String="";
+  Item :any
+  constructor(){
+   this.Data="welcome 1"
+  }
+  ClickData():void{
+    alert (this.Item)
+  }
 }
