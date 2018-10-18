@@ -1,17 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import {DataCall } from './Call';
+import { NgModule } from '@angular/core';
+import { ProgressSpiner } from './Utility/ProgressSpiner';
+
+import { LoaderService } from './Services/LoaderService';
+import { Mdeclarations } from './Mdeclarations';
+import { Mimports } from './Mimports';
+import { ImportProvider } from './Mproviders';
 @NgModule({
-  declarations: [
-    AppComponent, DataCall
-  ],
-  imports: [
-    BrowserModule, FormsModule      
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations:Mdeclarations,
+  imports:Mimports,
+  providers: ImportProvider,
+  entryComponents: [Mdeclarations[2]],
+  bootstrap: [Mdeclarations[0]]
 })
 export class AppModule { }
